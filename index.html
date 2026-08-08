@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto escolar sobre acessibilidade digital e Web para todos, com conteúdo educativo, WCAG, legislação, recursos interativos, quiz e o jogo Conserte o Site.">
+    <meta name="theme-color" content="#1557b0">
+    <title>Acessibilidade Digital e Web para Todos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo principal</a>
+
+    <div id="siteAnnouncement" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <header class="site-header" id="inicio">
+        <div class="container header-inner">
+            <a class="brand" href="#inicio" aria-label="Acessibilidade Digital e Web para Todos, voltar ao início">
+                <span class="brand-mark" aria-hidden="true">A+</span>
+                <span class="brand-text">
+                    <strong>Acessibilidade Digital</strong>
+                    <small>Web para todos</small>
+                </span>
+            </a>
+
+            <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNavigation" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation" aria-label="Navegação principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#wcag">WCAG</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#recursos">Recursos</a>
+                <a href="#quiz">Quiz</a>
+                <a class="nav-game-link" href="#jogo">Conserte o Site</a>
+            </nav>
+
+            <div class="header-actions" aria-label="Ferramentas do site">
+                <button class="icon-button" id="searchOpen" type="button" aria-haspopup="dialog" aria-label="Abrir busca interna">⌕</button>
+                <button class="icon-button" id="themeButton" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu" aria-label="Escolher tema visual">◐</button>
+                <button class="accessibility-trigger" id="accessibilityOpen" type="button" aria-haspopup="dialog" aria-label="Abrir painel de acessibilidade">
+                    <span aria-hidden="true">♿</span>
+                    <span class="accessibility-trigger-text">Acessibilidade</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="theme-menu" id="themeMenu" role="menu" hidden>
+            <button type="button" role="menuitemradio" data-theme-option="light" aria-checked="true">☀ Claro</button>
+            <button type="button" role="menuitemradio" data-theme-option="dark" aria-checked="false">☾ Escuro</button>
+            <button type="button" role="menuitemradio" data-theme-option="contrast" aria-checked="false">◩ Alto contraste</button>
+            <button type="button" role="menuitemradio" data-theme-option="colorblind" aria-checked="false">◉ Amigável para daltonismo</button>
+        </div>
+    </header>
+
+    <main id="conteudo-principal" tabindex="-1">
+        <section class="hero section" aria-labelledby="heroTitle">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Projeto escolar • Inclusão digital • WCAG 2.2</p>
+                    <h1 id="heroTitle">Acessibilidade Digital e <span>Web para Todos</span></h1>
+                    <p class="hero-lead">Uma Web acessível não elimina diferenças. Ela elimina barreiras desnecessárias para que mais pessoas possam estudar, trabalhar, se informar, criar e participar do mundo digital.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#sobre">Explorar o conteúdo</a>
+                        <a class="button button-secondary" href="#jogo">🛠️ Jogar Conserte o Site</a>
+                    </div>
+                    <ul class="hero-highlights" aria-label="Destaques do projeto">
+                        <li><span aria-hidden="true">✓</span> Conteúdo educativo</li>
+                        <li><span aria-hidden="true">✓</span> Recursos acessíveis</li>
+                        <li><span aria-hidden="true">✓</span> Atividades interativas</li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual reveal" aria-label="Ilustração conceitual de recursos de acessibilidade">
+                    <div class="hero-orbit" aria-hidden="true">
+                        <div class="orbit-center">A11Y</div>
+                        <span class="orbit-item orbit-item-1">⌨</span>
+                        <span class="orbit-item orbit-item-2">CC</span>
+                        <span class="orbit-item orbit-item-3">Aa</span>
+                        <span class="orbit-item orbit-item-4">🔊</span>
+                        <span class="orbit-item orbit-item-5">👁</span>
+                        <span class="orbit-item orbit-item-6">🤟</span>
+                    </div>
+                    <div class="hero-note">
+                        <strong>Acessibilidade é parte do projeto</strong>
+                        <span>Não um “extra” colocado no final.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="sobre" aria-labelledby="sobreTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Começando pelo essencial</p>
+                    <h2 id="sobreTitle">O que é acessibilidade digital?</h2>
+                    <p>Acessibilidade digital é o conjunto de práticas que permite que sites, aplicativos, documentos e serviços digitais possam ser percebidos, compreendidos e utilizados por pessoas com diferentes características, habilidades e formas de interação.</p>
+                </div>
+
+                <div class="content-grid three-columns">
+                    <article class="info-card reveal">
+                        <span class="card-icon" aria-hidden="true">🌐</span>
+                        <h3>Uma Web realmente acessível</h3>
+                        <p>Uma página acessível oferece alternativas para conteúdos visuais e sonoros, pode ser usada por teclado, mantém boa legibilidade e possui estrutura que tecnologias assistivas conseguem interpretar.</p>
+                    </article>
+                    <article class="info-card reveal">
+                        <span class="card-icon" aria-hidden="true">🧩</span>
+                        <h3>Mais pessoas se beneficiam</h3>
+                        <p>Pessoas cegas, com baixa visão, surdas, com limitações motoras ou cognitivas se beneficiam diretamente. Também ganham pessoas idosas, usuários com lesões temporárias, telas pequenas, ambientes ruidosos ou conexão limitada.</p>
+                    </article>
+                    <article class="info-card reveal">
+                        <span class="card-icon" aria-hidden="true">🤝</span>
+                        <h3>Inclusão é participação</h3>
+                        <p>Quando um serviço importante só funciona para parte da população, a barreira não está na pessoa: está no modo como o serviço foi projetado. Acessibilidade amplia autonomia e participação.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="barreiras" aria-labelledby="barreirasTitle">
+            <div class="container split-layout">
+                <div class="section-heading align-left reveal">
+                    <p class="eyebrow">Barreiras digitais</p>
+                    <h2 id="barreirasTitle">Pequenos erros podem bloquear tarefas inteiras</h2>
+                    <p>Uma pessoa pode chegar ao site, mas ainda assim não conseguir usá-lo. É aí que aparecem barreiras de navegação, compreensão, percepção ou controle.</p>
+                </div>
+
+                <div class="barrier-list reveal">
+                    <article>
+                        <span aria-hidden="true">01</span>
+                        <div><h3>Imagem sem descrição</h3><p>Um leitor de tela não consegue transmitir o significado de uma imagem informativa quando falta um texto alternativo adequado.</p></div>
+                    </article>
+                    <article>
+                        <span aria-hidden="true">02</span>
+                        <div><h3>Contraste fraco</h3><p>Textos muito parecidos com a cor de fundo podem ficar difíceis ou impossíveis de ler para pessoas com baixa visão ou em telas sob muita luz.</p></div>
+                    </article>
+                    <article>
+                        <span aria-hidden="true">03</span>
+                        <div><h3>Interação apenas com mouse</h3><p>Menus, botões e componentes que não funcionam por teclado excluem quem não utiliza mouse ou depende de tecnologias de entrada alternativas.</p></div>
+                    </article>
+                    <article>
+                        <span aria-hidden="true">04</span>
+                        <div><h3>Formulário confuso</h3><p>Campos sem rótulos, mensagens de erro vagas e instruções pouco claras dificultam o preenchimento e a correção de informações.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-accent" id="inclusao" aria-labelledby="inclusaoTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Inclusão digital</p>
+                    <h2 id="inclusaoTitle">Acessibilidade amplia autonomia, não apenas acesso</h2>
+                    <p>A inclusão digital não se resume a possuir um dispositivo ou conexão. É preciso conseguir utilizar serviços, compreender informações e realizar tarefas com independência.</p>
+                </div>
+                <div class="benefit-grid">
+                    <article class="benefit-card reveal"><strong>Educação</strong><p>Materiais estruturados, vídeos legendados e plataformas navegáveis permitem participação mais ampla em atividades escolares.</p></article>
+                    <article class="benefit-card reveal"><strong>Trabalho</strong><p>Ferramentas acessíveis reduzem barreiras em processos seletivos, capacitações e rotinas profissionais.</p></article>
+                    <article class="benefit-card reveal"><strong>Serviços públicos</strong><p>Informações e formulários acessíveis ajudam cidadãos a exercer direitos e acessar serviços com autonomia.</p></article>
+                    <article class="benefit-card reveal"><strong>Comunicação</strong><p>Conteúdo em formatos diversos alcança pessoas que percebem e compreendem informação de maneiras diferentes.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="wcag" aria-labelledby="wcagTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Diretrizes internacionais</p>
+                    <h2 id="wcagTitle">WCAG: um guia para construir uma Web mais acessível</h2>
+                    <p>As <strong>Web Content Accessibility Guidelines (WCAG)</strong>, desenvolvidas pela W3C Web Accessibility Initiative, organizam requisitos de acessibilidade em quatro princípios: Perceptível, Operável, Compreensível e Robusto.</p>
+                </div>
+
+                <div class="wcag-grid">
+                    <article class="wcag-card reveal">
+                        <span class="wcag-letter" aria-hidden="true">P</span>
+                        <h3>Perceptível</h3>
+                        <p>As informações precisam poder ser percebidas de diferentes formas.</p>
+                        <ul><li>Texto alternativo em imagens.</li><li>Legendas em vídeos.</li><li>Contraste suficiente.</li></ul>
+                    </article>
+                    <article class="wcag-card reveal">
+                        <span class="wcag-letter" aria-hidden="true">O</span>
+                        <h3>Operável</h3>
+                        <p>O usuário precisa conseguir controlar a interface.</p>
+                        <ul><li>Navegação por teclado.</li><li>Foco visível.</li><li>Tempo suficiente para interagir.</li></ul>
+                    </article>
+                    <article class="wcag-card reveal">
+                        <span class="wcag-letter" aria-hidden="true">C</span>
+                        <h3>Compreensível</h3>
+                        <p>Conteúdo e funcionamento devem ser claros e previsíveis.</p>
+                        <ul><li>Textos objetivos.</li><li>Rótulos claros.</li><li>Erros explicados de forma útil.</li></ul>
+                    </article>
+                    <article class="wcag-card reveal">
+                        <span class="wcag-letter" aria-hidden="true">R</span>
+                        <h3>Robusto</h3>
+                        <p>O conteúdo deve funcionar com navegadores e tecnologias assistivas.</p>
+                        <ul><li>HTML semântico.</li><li>Nomes e estados acessíveis.</li><li>Código consistente.</li></ul>
+                    </article>
+                </div>
+
+                <div class="wcag-levels reveal" aria-labelledby="levelsTitle">
+                    <div><h3 id="levelsTitle">Níveis de conformidade</h3><p>Os critérios das WCAG são classificados em três níveis. O nível AA costuma ser uma referência prática importante para projetos acessíveis, enquanto AAA inclui critérios mais avançados e nem sempre aplicáveis a todo tipo de conteúdo.</p></div>
+                    <div class="level-badges" aria-label="Níveis A, AA e AAA">
+                        <span><strong>A</strong> essencial</span>
+                        <span><strong>AA</strong> intermediário</span>
+                        <span><strong>AAA</strong> avançado</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="legislacao" aria-labelledby="leiTitle">
+            <div class="container legislation-layout">
+                <div class="legislation-card reveal">
+                    <span class="legal-icon" aria-hidden="true">§</span>
+                    <p class="eyebrow">Brasil</p>
+                    <h2 id="leiTitle">Lei Brasileira de Inclusão</h2>
+                    <p>A Lei nº 13.146/2015, conhecida como Lei Brasileira de Inclusão da Pessoa com Deficiência, reforça a acessibilidade como condição para participação social com autonomia e igualdade de oportunidades.</p>
+                    <p>O artigo 63 determina a acessibilidade nos sites mantidos por empresas com sede ou representação comercial no Brasil e por órgãos de governo, considerando boas práticas e diretrizes de acessibilidade adotadas internacionalmente.</p>
+                    <a class="text-link" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">Consultar a Lei nº 13.146/2015 no Planalto <span class="sr-only">(abre em nova aba)</span> ↗</a>
+                </div>
+                <div class="legal-points reveal">
+                    <article><h3>Acessibilidade como direito</h3><p>O acesso à informação e à comunicação é parte da inclusão social. Barreiras digitais podem limitar participação em educação, trabalho, cultura e serviços.</p></article>
+                    <article><h3>Responsabilidade no projeto</h3><p>Instituições, equipes de conteúdo e desenvolvimento precisam considerar diferentes usuários desde o planejamento, evitando que acessibilidade seja tratada somente como correção posterior.</p></article>
+                    <article><h3>Inclusão digital com qualidade</h3><p>Disponibilizar um serviço online não basta. Ele precisa ser utilizável, compreensível e compatível com diferentes formas de interação.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="boas-praticas" aria-labelledby="praticasTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Conteúdo educativo</p>
+                    <h2 id="praticasTitle">Boas práticas que mudam a experiência</h2>
+                    <p>Acessibilidade surge de muitas decisões simples feitas corretamente e testadas com cuidado.</p>
+                </div>
+
+                <div class="practice-grid">
+                    <article class="practice-card reveal"><span aria-hidden="true">🏷️</span><h3>HTML semântico</h3><p>Elementos como <code>header</code>, <code>nav</code>, <code>main</code>, <code>button</code> e títulos em ordem ajudam navegadores e leitores de tela a entender estrutura e função.</p></article>
+                    <article class="practice-card reveal"><span aria-hidden="true">🎨</span><h3>Contraste</h3><p>Texto e controles precisam se destacar do fundo. Cor também não deve ser o único meio de transmitir um estado ou informação importante.</p></article>
+                    <article class="practice-card reveal"><span aria-hidden="true">🖼️</span><h3>Texto alternativo</h3><p>Imagens informativas precisam de descrições equivalentes. Imagens decorativas podem usar <code>alt=""</code> para não gerar ruído em leitores de tela.</p></article>
+                    <article class="practice-card reveal"><span aria-hidden="true">🎬</span><h3>Legendas</h3><p>Vídeos com fala precisam de legendas adequadas. Em alguns contextos, transcrição, audiodescrição e Libras também ampliam o acesso.</p></article>
+                    <article class="practice-card reveal"><span aria-hidden="true">⌨️</span><h3>Teclado e foco</h3><p>Toda ação essencial deve funcionar sem mouse. O foco precisa ser visível e seguir uma ordem lógica, sem ficar escondido por menus ou modais.</p></article>
+                    <article class="practice-card reveal"><span aria-hidden="true">📝</span><h3>Formulários</h3><p>Associe cada campo a um <code>label</code>, forneça instruções úteis e mensagens de erro que indiquem o que aconteceu e como corrigir.</p></article>
+                    <article class="practice-card reveal"><span aria-hidden="true">🔎</span><h3>Legibilidade</h3><p>Evite textos minúsculos, blocos excessivamente longos e linhas muito comprimidas. Zoom e aumento de fonte não devem destruir o layout.</p></article>
+                    <article class="practice-card reveal"><span aria-hidden="true">🧠</span><h3>Compreensão</h3><p>Linguagem clara, navegação previsível, instruções objetivas e menos distrações também apoiam pessoas com necessidades cognitivas diversas.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-dark" id="recursos" aria-labelledby="recursosTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Explore o projeto</p>
+                    <h2 id="recursosTitle">Conteúdo em diferentes formatos</h2>
+                    <p>Nem todo mundo aprende da mesma maneira. Por isso, o projeto oferece caminhos diferentes para explorar o tema.</p>
+                </div>
+                <div class="resource-grid">
+                    <a class="resource-card reveal" href="#videos"><span aria-hidden="true">▶</span><h3>Vídeos</h3><p>Conteúdos sobre acessibilidade, leitores de tela, Libras e tecnologias assistivas.</p></a>
+                    <a class="resource-card reveal" href="#mapa-mental"><span aria-hidden="true">🧠</span><h3>Mapa mental</h3><p>Conceitos conectados em uma visualização interativa.</p></a>
+                    <a class="resource-card reveal" href="#galeria"><span aria-hidden="true">🖼</span><h3>Galeria e charges</h3><p>Espaço preparado para imagens, artes e materiais do projeto.</p></a>
+                    <a class="resource-card reveal" href="#mural"><span aria-hidden="true">✦</span><h3>Mural</h3><p>Dicas, curiosidades, reflexões e problemas comuns.</p></a>
+                    <a class="resource-card reveal featured-resource" href="#jogo"><span aria-hidden="true">🛠</span><h3>Conserte o Site</h3><p>Encontre problemas de acessibilidade em interfaces propositalmente mal construídas.</p></a>
+                    <a class="resource-card reveal" href="#timeline"><span aria-hidden="true">↗</span><h3>Timeline</h3><p>Uma viagem pela evolução da acessibilidade na Web.</p></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="timeline" aria-labelledby="timelineTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Evolução da Web acessível</p>
+                    <h2 id="timelineTitle">Timeline interativa</h2>
+                    <p>Use as setas, os botões de ano ou as teclas direcionais para navegar pelos acontecimentos.</p>
+                </div>
+
+                <div class="timeline-shell reveal" data-timeline>
+                    <div class="timeline-controls">
+                        <button class="icon-button" id="timelinePrev" type="button" aria-label="Acontecimento anterior">←</button>
+                        <div class="timeline-years" id="timelineYears" role="tablist" aria-label="Anos da timeline"></div>
+                        <button class="icon-button" id="timelineNext" type="button" aria-label="Próximo acontecimento">→</button>
+                    </div>
+                    <div class="timeline-track" aria-hidden="true"><span id="timelineProgress"></span></div>
+                    <article class="timeline-detail" id="timelineDetail" role="tabpanel" tabindex="0" aria-live="polite"></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="mural" aria-labelledby="muralTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Mural interativo</p>
+                    <h2 id="muralTitle">Ideias rápidas para lembrar e compartilhar</h2>
+                    <p>Filtre os cartões por categoria. Cada cartão traz uma dica, reflexão, curiosidade ou barreira comum.</p>
+                </div>
+                <div class="filter-bar reveal" role="group" aria-label="Filtrar mural por categoria">
+                    <button type="button" class="filter-button active" data-mural-filter="todos" aria-pressed="true">Todos</button>
+                    <button type="button" class="filter-button" data-mural-filter="dica" aria-pressed="false">Dicas</button>
+                    <button type="button" class="filter-button" data-mural-filter="reflexao" aria-pressed="false">Reflexões</button>
+                    <button type="button" class="filter-button" data-mural-filter="barreira" aria-pressed="false">Barreiras</button>
+                    <button type="button" class="filter-button" data-mural-filter="curiosidade" aria-pressed="false">Curiosidades</button>
+                </div>
+                <div class="mural-grid" id="muralGrid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section" id="videos" aria-labelledby="videosTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Vídeos selecionados</p>
+                    <h2 id="videosTitle">Acessibilidade em prática</h2>
+                    <p>Os vídeos abaixo usam links reais e podem ser substituídos depois editando apenas os cards desta seção.</p>
+                </div>
+                <div class="video-grid">
+                    <article class="video-card reveal">
+                        <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/20SHvU2PKsM" title="Introduction to Web Accessibility and W3C Standards, W3C WAI" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                        <div class="video-card-body"><span class="tag">W3C • Web</span><h3>Introdução à acessibilidade Web e aos padrões W3C</h3><p>Visão geral oficial sobre acessibilidade na Web e por que padrões acessíveis beneficiam pessoas com diferentes necessidades.</p><a class="text-link" href="https://www.youtube.com/watch?v=20SHvU2PKsM" target="_blank" rel="noopener noreferrer">Assistir no YouTube <span class="sr-only">(abre em nova aba)</span> ↗</a></div>
+                    </article>
+                    <article class="video-card reveal">
+                        <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/WaP_OPdV0rY" title="Como as pessoas cegas utilizam o computador, Centro Tecnológico de Acessibilidade" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                        <div class="video-card-body"><span class="tag">Leitor de tela</span><h3>Como pessoas cegas utilizam computadores e celulares</h3><p>Demonstração prática do uso de leitores de tela e de como a estrutura de uma interface interfere diretamente na navegação.</p><a class="text-link" href="https://www.youtube.com/watch?v=WaP_OPdV0rY" target="_blank" rel="noopener noreferrer">Assistir no YouTube <span class="sr-only">(abre em nova aba)</span> ↗</a></div>
+                    </article>
+                    <article class="video-card reveal">
+                        <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/cUBW_ULHJcg" title="Acessibilidade e VLibras, CanalGov" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                        <div class="video-card-body"><span class="tag">Libras</span><h3>VLibras e acessibilidade</h3><p>Conteúdo do CanalGov sobre o VLibras, ferramenta de tradução automática de Português para Língua Brasileira de Sinais.</p><a class="text-link" href="https://www.youtube.com/watch?v=cUBW_ULHJcg" target="_blank" rel="noopener noreferrer">Assistir no YouTube <span class="sr-only">(abre em nova aba)</span> ↗</a></div>
+                    </article>
+                    <article class="video-card reveal">
+                        <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/f-PVhBozrS0" title="Libras para todos: tecnologias assistivas, UNIVESP" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                        <div class="video-card-body"><span class="tag">Tecnologia assistiva</span><h3>Tecnologias assistivas</h3><p>Material da UNIVESP que apresenta recursos tecnológicos voltados à ampliação de autonomia e participação.</p><a class="text-link" href="https://www.youtube.com/watch?v=f-PVhBozrS0" target="_blank" rel="noopener noreferrer">Assistir no YouTube <span class="sr-only">(abre em nova aba)</span> ↗</a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="galeria" aria-labelledby="galeriaTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Galeria acessível</p>
+                    <h2 id="galeriaTitle">Imagens, artes e charges</h2>
+                    <p>As três imagens demonstrativas mostram como a galeria funciona. Depois, basta trocar o arquivo, o <code>alt</code>, a legenda e a descrição.</p>
+                </div>
+
+                <!-- PARA ADICIONAR SUAS IMAGENS: coloque os arquivos em assets/images/ e duplique um figure.gallery-item. -->
+                <div class="gallery-grid">
+                    <figure class="gallery-item reveal">
+                        <button type="button" class="gallery-open" data-gallery-item data-src="assets/images/acessibilidade-teclado.svg" data-alt="Ilustração de um teclado com a tecla Tab destacada e um botão com contorno de foco visível." data-caption="Navegação por teclado: foco visível ajuda a pessoa a saber onde está na página.">
+                            <img src="assets/images/acessibilidade-teclado.svg" alt="Ilustração de navegação por teclado com tecla Tab e indicador de foco em um botão.">
+                            <span aria-hidden="true">Ampliar</span>
+                        </button>
+                        <figcaption>Navegação por teclado e foco visível.</figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal">
+                        <button type="button" class="gallery-open" data-gallery-item data-src="assets/images/contraste.svg" data-alt="Comparação entre um cartão com texto de baixo contraste e outro com texto branco sobre fundo escuro, mais legível." data-caption="Contraste adequado melhora a percepção do conteúdo em diferentes condições visuais e ambientais.">
+                            <img src="assets/images/contraste.svg" alt="Comparação visual entre baixo contraste e bom contraste de texto.">
+                            <span aria-hidden="true">Ampliar</span>
+                        </button>
+                        <figcaption>Contraste como parte da legibilidade.</figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal">
+                        <button type="button" class="gallery-open" data-gallery-item data-src="assets/images/tecnologias-assistivas.svg" data-alt="Computador cercado por símbolos de legendas, ampliação de texto, teclado e áudio, representando diferentes tecnologias assistivas." data-caption="Tecnologias assistivas podem oferecer diferentes formas de perceber, navegar e interagir com conteúdo digital.">
+                            <img src="assets/images/tecnologias-assistivas.svg" alt="Computador cercado por símbolos de recursos de acessibilidade e tecnologias assistivas.">
+                            <span aria-hidden="true">Ampliar</span>
+                        </button>
+                        <figcaption>Diferentes recursos para diferentes formas de interação.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="charges-box reveal" aria-labelledby="chargesTitle">
+                    <div>
+                        <p class="eyebrow">Espaço reservado</p>
+                        <h3 id="chargesTitle">Charges e artes do projeto</h3>
+                        <p>Coloque seus arquivos em <code>assets/charges/</code>. Se a charge tiver texto, ironia ou informação essencial, descreva a mensagem em uma legenda ou descrição acessível. Não deixe a interpretação depender somente da imagem.</p>
+                    </div>
+                    <!-- ADICIONE SUA CHARGE AQUI.
+                    Exemplo:
+                    <figure class="charge-card">
+                        <img src="assets/charges/minha-charge.jpg" alt="Descrição visual e da mensagem principal da charge">
+                        <figcaption>Legenda e contexto da charge.</figcaption>
+                    </figure>
+                    -->
+                    <div class="charge-placeholder" role="img" aria-label="Espaço reservado para adicionar uma charge do projeto">
+                        <span aria-hidden="true">✎</span>
+                        <strong>Sua charge entra aqui</strong>
+                        <small>assets/charges/</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="mapa-mental" aria-labelledby="mapaTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Mapa mental</p>
+                    <h2 id="mapaTitle">Conectando os conceitos de acessibilidade digital</h2>
+                    <p>Selecione um nó do mapa para ver sua relação com o tema central.</p>
+                </div>
+
+                <div class="mindmap-layout reveal">
+                    <div class="mindmap" id="mindmap" aria-label="Mapa mental interativo sobre acessibilidade digital">
+                        <div class="mindmap-center">Acessibilidade<br>Digital</div>
+                        <button type="button" class="mind-node node-1" data-mind-title="Web" data-mind-description="Sites e aplicações devem funcionar para pessoas com diferentes formas de percepção e interação.">Web</button>
+                        <button type="button" class="mind-node node-2" data-mind-title="Tecnologias Assistivas" data-mind-description="Leitores de tela, ampliadores, linhas Braille, controle por voz e outros recursos apoiam a interação com sistemas digitais.">Tecnologias<br>Assistivas</button>
+                        <button type="button" class="mind-node node-3" data-mind-title="Inclusão" data-mind-description="Acessibilidade reduz barreiras e amplia autonomia, participação social, educacional e profissional.">Inclusão</button>
+                        <button type="button" class="mind-node node-4" data-mind-title="WCAG" data-mind-description="As WCAG organizam critérios de acessibilidade sob os princípios Perceptível, Operável, Compreensível e Robusto.">WCAG</button>
+                        <button type="button" class="mind-node node-5" data-mind-title="HTML" data-mind-description="Semântica, títulos, landmarks, labels e elementos nativos formam a base estrutural de experiências acessíveis.">HTML</button>
+                        <button type="button" class="mind-node node-6" data-mind-title="CSS" data-mind-description="Contraste, foco, tamanhos legíveis, adaptação responsiva e redução de movimento fazem parte da apresentação acessível.">CSS</button>
+                        <button type="button" class="mind-node node-7" data-mind-title="JavaScript" data-mind-description="Interações precisam preservar teclado, foco, estados, mensagens e comportamento previsível.">JavaScript</button>
+                        <button type="button" class="mind-node node-8" data-mind-title="Libras" data-mind-description="A Língua Brasileira de Sinais é uma língua visual-espacial. Recursos em Libras podem ampliar o acesso de pessoas surdas sinalizantes.">LIBRAS</button>
+                        <button type="button" class="mind-node node-9" data-mind-title="Leitores de tela" data-mind-description="Softwares leitores de tela interpretam conteúdo e controles por meio da estrutura, nomes e estados disponibilizados pela página.">Leitores<br>de tela</button>
+                        <button type="button" class="mind-node node-10" data-mind-title="Contraste" data-mind-description="Diferença adequada entre primeiro plano e fundo melhora a legibilidade de texto e componentes de interface.">Contraste</button>
+                        <button type="button" class="mind-node node-11" data-mind-title="Teclado" data-mind-description="Ações essenciais devem ser possíveis sem mouse, com foco visível e ordem de navegação lógica.">Teclado</button>
+                        <button type="button" class="mind-node node-12" data-mind-title="Legendas" data-mind-description="Legendas tornam a fala e informações sonoras importantes disponíveis em texto sincronizado.">Legendas</button>
+                        <button type="button" class="mind-node node-13" data-mind-title="Texto alternativo" data-mind-description="O atributo alt comunica o propósito de imagens informativas e pode ser vazio quando a imagem é somente decorativa.">Texto<br>alternativo</button>
+                    </div>
+                    <aside class="mindmap-detail" id="mindmapDetail" aria-live="polite">
+                        <span class="tag">Conceito selecionado</span>
+                        <h3>Acessibilidade Digital</h3>
+                        <p>Escolha um dos nós para explorar como cada conceito contribui para uma Web mais acessível.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="quiz" aria-labelledby="quizTitle">
+            <div class="container quiz-layout">
+                <div class="section-heading align-left reveal">
+                    <p class="eyebrow">Teste seus conhecimentos</p>
+                    <h2 id="quizTitle">Quiz de acessibilidade digital</h2>
+                    <p>As perguntas vão do básico ao intermediário. Depois de responder, você recebe uma explicação curta antes de avançar.</p>
+                </div>
+
+                <div class="quiz-card reveal" id="quizApp">
+                    <div class="quiz-topbar">
+                        <span id="quizCounter">Pergunta 1 de 10</span>
+                        <span id="quizScore">0 pontos</span>
+                    </div>
+                    <div class="progress" aria-label="Progresso do quiz"><span id="quizProgress"></span></div>
+                    <div id="quizContent" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section game-section" id="jogo" aria-labelledby="gameTitle">
+            <div class="container">
+                <div class="game-heading reveal">
+                    <div>
+                        <p class="eyebrow">Principal experiência interativa</p>
+                        <h2 id="gameTitle">🛠️ Conserte o Site</h2>
+                        <p>Você recebeu uma interface propositalmente cheia de problemas de acessibilidade. Observe, navegue, investigue e encontre o que precisa ser corrigido.</p>
+                    </div>
+                    <div class="game-badge" aria-label="Jogo com três fases">3 fases</div>
+                </div>
+
+                <div class="game-shell reveal" id="gameApp">
+                    <div class="game-start" id="gameStart">
+                        <span class="game-tool-icon" aria-hidden="true">🛠️</span>
+                        <h3>Conserte o Site</h3>
+                        <p>Encontre problemas de contraste, estrutura, formulários, teclado, foco, multimídia e tecnologia assistiva. Cada problema encontrado ensina como corrigi-lo.</p>
+                        <div class="game-rules">
+                            <span><strong>+100</strong> por problema</span>
+                            <span><strong>+ bônus</strong> por velocidade e sequência</span>
+                            <span><strong>−25</strong> por dica</span>
+                        </div>
+                        <button class="button button-primary button-large" id="gameStartButton" type="button">Começar</button>
+                    </div>
+
+                    <div class="game-play" id="gamePlay" hidden>
+                        <div class="game-dashboard" aria-label="Informações do jogo">
+                            <div><small>Fase</small><strong id="gamePhase">1 / 3</strong></div>
+                            <div><small>Pontuação</small><strong id="gameScore">0</strong></div>
+                            <div><small>Encontrados</small><strong id="gameFound">0 / 10</strong></div>
+                            <div><small>Tempo</small><strong id="gameTime">00:00</strong></div>
+                        </div>
+
+                        <div class="progress game-progress" aria-label="Progresso do jogo"><span id="gameProgress"></span></div>
+
+                        <div class="game-toolbar">
+                            <div>
+                                <span class="tag" id="gamePhaseLabel">Fase 1</span>
+                                <h3 id="gamePhaseTitle">Problemas básicos</h3>
+                            </div>
+                            <div class="game-toolbar-actions">
+                                <button class="button button-small button-secondary" id="gameHintButton" type="button">💡 Dica</button>
+                                <button class="button button-small button-ghost" id="gameRestartButton" type="button">↻ Reiniciar</button>
+                            </div>
+                        </div>
+
+                        <div class="game-workspace">
+                            <div class="broken-browser" aria-labelledby="brokenSiteTitle">
+                                <div class="fake-browser-bar" aria-hidden="true"><span></span><span></span><span></span><div>site-problema.exemplo</div></div>
+                                <div class="broken-site" id="gameStage" role="group" aria-labelledby="brokenSiteTitle">
+                                    <h4 id="brokenSiteTitle" class="sr-only">Página problemática da fase atual</h4>
+                                </div>
+                            </div>
+
+                            <aside class="game-feedback" aria-live="polite" aria-atomic="true">
+                                <span class="feedback-icon" id="gameFeedbackIcon" aria-hidden="true">🔎</span>
+                                <h3 id="gameFeedbackTitle">Observe a interface</h3>
+                                <div id="gameFeedbackText"><p>Clique ou pressione Enter nos elementos que parecem apresentar uma barreira de acessibilidade.</p></div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <div class="game-finish" id="gameFinish" hidden aria-live="polite">
+                        <span class="game-trophy" aria-hidden="true">🏆</span>
+                        <p class="eyebrow">Site corrigido</p>
+                        <h3>Parabéns!</h3>
+                        <p>Você encontrou todos os problemas desta simulação. A melhor correção, porém, ainda é projetar acessibilidade desde o início.</p>
+                        <div class="game-result-grid">
+                            <div><small>Pontuação</small><strong id="gameFinalScore">0</strong></div>
+                            <div><small>Tempo</small><strong id="gameFinalTime">00:00</strong></div>
+                            <div><small>Dicas usadas</small><strong id="gameFinalHints">0</strong></div>
+                            <div><small>Classificação</small><strong id="gameFinalLevel">Aprendiz</strong></div>
+                        </div>
+                        <button class="button button-primary button-large" id="gamePlayAgainButton" type="button">Jogar novamente</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="tecnologias" aria-labelledby="tecnologiasTitle">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Tecnologias assistivas</p>
+                    <h2 id="tecnologiasTitle">A tecnologia pode criar barreiras ou removê-las</h2>
+                    <p>Tecnologia assistiva é um termo amplo. No ambiente digital, ela pode incluir software, hardware e configurações que ajudam pessoas a acessar informações e executar tarefas.</p>
+                </div>
+                <div class="assistive-grid">
+                    <article class="assistive-card reveal"><span aria-hidden="true">🔊</span><h3>Leitores de tela</h3><p>Convertem estrutura e texto da interface em fala sintetizada ou saída Braille.</p></article>
+                    <article class="assistive-card reveal"><span aria-hidden="true">🔍</span><h3>Ampliação</h3><p>Aumenta conteúdo, contraste ou áreas específicas para apoiar pessoas com baixa visão.</p></article>
+                    <article class="assistive-card reveal"><span aria-hidden="true">🎙</span><h3>Controle por voz</h3><p>Permite navegar e executar comandos por fala, útil para pessoas com limitações motoras.</p></article>
+                    <article class="assistive-card reveal"><span aria-hidden="true">⠿</span><h3>Linha Braille</h3><p>Apresenta conteúdo textual em Braille tátil e pode trabalhar em conjunto com leitores de tela.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-conclusion" id="conclusao" aria-labelledby="conclusaoTitle">
+            <div class="container conclusion-card reveal">
+                <div>
+                    <p class="eyebrow">Conclusão</p>
+                    <h2 id="conclusaoTitle">A Web só cumpre seu potencial quando mais pessoas conseguem participar</h2>
+                    <p>Acessibilidade digital combina técnica, planejamento e respeito à diversidade humana. Ela não exige que todas as pessoas usem a Web da mesma maneira. Exige que a Web ofereça caminhos para que diferentes pessoas consigam chegar ao mesmo objetivo.</p>
+                    <p>Projetar com semântica, teclado, contraste, alternativas textuais, mídia acessível e testes reais torna o conteúdo mais resistente, compreensível e inclusivo.</p>
+                </div>
+                <a class="button button-primary" href="#inicio">Voltar ao início ↑</a>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="referencias" aria-labelledby="referenciasTitle">
+            <div class="container references">
+                <div class="section-heading align-left reveal">
+                    <p class="eyebrow">Fontes</p>
+                    <h2 id="referenciasTitle">Referências principais</h2>
+                </div>
+                <ul class="reference-list reveal">
+                    <li><strong>W3C Web Accessibility Initiative.</strong> WCAG 2 Overview e Web Content Accessibility Guidelines 2.2. <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">Acessar referência <span class="sr-only">(abre em nova aba)</span> ↗</a></li>
+                    <li><strong>W3C WAI.</strong> Introduction to Web Accessibility. <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener noreferrer">Acessar referência <span class="sr-only">(abre em nova aba)</span> ↗</a></li>
+                    <li><strong>Brasil.</strong> Lei nº 13.146, de 6 de julho de 2015 — Lei Brasileira de Inclusão da Pessoa com Deficiência. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">Acessar referência <span class="sr-only">(abre em nova aba)</span> ↗</a></li>
+                    <li><strong>Governo Digital.</strong> Suíte VLibras e documentação do VLibras Widget. <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/vlibras/vlibras" target="_blank" rel="noopener noreferrer">Acessar referência <span class="sr-only">(abre em nova aba)</span> ↗</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">A+</span><span class="brand-text"><strong>Acessibilidade Digital</strong><small>Web para todos</small></span></a>
+                <p>Projeto educativo sobre inclusão e acessibilidade na Web.</p>
+            </div>
+            <nav aria-label="Links do rodapé">
+                <a href="#sobre">Sobre</a>
+                <a href="#boas-praticas">Boas práticas</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#jogo">Jogo</a>
+                <a href="#referencias">Referências</a>
+            </nav>
+            <div class="footer-note"><strong>Princípio do projeto</strong><p>Acessibilidade deve ser pensada desde o início, testada durante o desenvolvimento e revisada com usuários sempre que possível.</p></div>
+        </div>
+    </footer>
+
+    <dialog class="modal search-dialog" id="searchDialog" aria-labelledby="searchTitle">
+        <div class="modal-header">
+            <div><span class="eyebrow">Busca interna</span><h2 id="searchTitle">Encontrar conteúdo</h2></div>
+            <button class="icon-button modal-close" type="button" data-close-dialog="searchDialog" aria-label="Fechar busca">×</button>
+        </div>
+        <form class="search-form" id="searchForm" role="search">
+            <label for="searchInput">O que você quer encontrar?</label>
+            <div class="search-input-row"><input id="searchInput" type="search" autocomplete="off" placeholder="Ex.: contraste, WCAG, teclado"><button class="button button-primary" type="submit">Buscar</button></div>
+        </form>
+        <div class="search-status" id="searchStatus" aria-live="polite"></div>
+        <div class="search-results" id="searchResults"></div>
+    </dialog>
+
+    <dialog class="modal gallery-dialog" id="galleryDialog" aria-labelledby="galleryDialogTitle">
+        <div class="modal-header">
+            <div><span class="eyebrow">Visualização ampliada</span><h2 id="galleryDialogTitle">Imagem da galeria</h2></div>
+            <button class="icon-button modal-close" type="button" data-close-dialog="galleryDialog" aria-label="Fechar imagem ampliada">×</button>
+        </div>
+        <div class="gallery-modal-content">
+            <button class="icon-button gallery-nav" id="galleryPrev" type="button" aria-label="Imagem anterior">←</button>
+            <figure><img id="galleryModalImage" src="assets/images/acessibilidade-teclado.svg" alt=""><figcaption id="galleryModalCaption"></figcaption></figure>
+            <button class="icon-button gallery-nav" id="galleryNext" type="button" aria-label="Próxima imagem">→</button>
+        </div>
+    </dialog>
+
+    <section class="accessibility-panel" id="accessibilityPanel" role="dialog" aria-modal="true" aria-labelledby="accessibilityTitle" hidden>
+        <div class="accessibility-panel-inner">
+            <div class="modal-header">
+                <div><span class="eyebrow">Preferências</span><h2 id="accessibilityTitle">Painel de acessibilidade</h2></div>
+                <button class="icon-button" id="accessibilityClose" type="button" aria-label="Fechar painel de acessibilidade">×</button>
+            </div>
+
+            <p class="panel-intro">Ajuste a apresentação do site. As preferências são salvas neste navegador.</p>
+
+            <div class="accessibility-group">
+                <h3>Texto</h3>
+                <div class="control-row"><span>Tamanho da fonte</span><div><button type="button" data-a11y-action="font-decrease" aria-label="Diminuir fonte">A−</button><button type="button" data-a11y-action="font-reset">100%</button><button type="button" data-a11y-action="font-increase" aria-label="Aumentar fonte">A+</button></div></div>
+                <div class="control-row"><span>Espaçamento entre letras</span><div><button type="button" data-a11y-action="letter-decrease" aria-label="Diminuir espaçamento entre letras">−</button><button type="button" data-a11y-action="letter-reset">Padrão</button><button type="button" data-a11y-action="letter-increase" aria-label="Aumentar espaçamento entre letras">+</button></div></div>
+                <div class="control-row"><span>Espaçamento entre linhas</span><div><button type="button" data-a11y-action="line-decrease" aria-label="Diminuir espaçamento entre linhas">−</button><button type="button" data-a11y-action="line-reset">Padrão</button><button type="button" data-a11y-action="line-increase" aria-label="Aumentar espaçamento entre linhas">+</button></div></div>
+            </div>
+
+            <div class="accessibility-group">
+                <h3>Leitura e destaque</h3>
+                <label class="switch-row"><span><strong>Fonte amigável para leitura</strong><small>Usa uma fonte simples e espaçamento mais confortável.</small></span><input type="checkbox" data-a11y-toggle="dyslexiaFont"><i aria-hidden="true"></i></label>
+                <label class="switch-row"><span><strong>Modo de leitura facilitada</strong><small>Reduz distrações visuais e limita a largura dos textos.</small></span><input type="checkbox" data-a11y-toggle="readableMode"><i aria-hidden="true"></i></label>
+                <label class="switch-row"><span><strong>Destacar links</strong><small>Sublinha e reforça links.</small></span><input type="checkbox" data-a11y-toggle="highlightLinks"><i aria-hidden="true"></i></label>
+                <label class="switch-row"><span><strong>Destacar botões</strong><small>Aplica contorno extra aos botões.</small></span><input type="checkbox" data-a11y-toggle="highlightButtons"><i aria-hidden="true"></i></label>
+                <label class="switch-row"><span><strong>Destacar elementos clicáveis</strong><small>Realça controles e áreas interativas.</small></span><input type="checkbox" data-a11y-toggle="highlightClickables"><i aria-hidden="true"></i></label>
+            </div>
+
+            <div class="accessibility-group">
+                <h3>Navegação e movimento</h3>
+                <label class="switch-row"><span><strong>Foco visual reforçado</strong><small>Aumenta o destaque do elemento focado.</small></span><input type="checkbox" data-a11y-toggle="strongFocus"><i aria-hidden="true"></i></label>
+                <label class="switch-row"><span><strong>Modo de navegação por teclado</strong><small>Reforça indicadores de foco e mostra uma dica de navegação.</small></span><input type="checkbox" data-a11y-toggle="keyboardMode"><i aria-hidden="true"></i></label>
+                <label class="switch-row"><span><strong>Reduzir animações</strong><small>Diminui transições e movimentos decorativos.</small></span><input type="checkbox" data-a11y-toggle="reducedMotion"><i aria-hidden="true"></i></label>
+            </div>
+
+            <div class="keyboard-help" id="keyboardHelp" hidden><strong>Atalhos úteis:</strong> Tab avança, Shift + Tab volta, Enter ou Espaço ativa controles e Esc fecha janelas.</div>
+
+            <button class="button button-danger button-full" id="accessibilityReset" type="button">Restaurar todas as configurações</button>
+        </div>
+    </section>
+
+    <div class="a11y-backdrop" id="accessibilityBackdrop" hidden></div>
+
+    <div class="toast" id="siteToast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="js/accessibility.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        if (window.VLibras && window.VLibras.Widget) {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        }
+    </script>
+</body>
+</html>
