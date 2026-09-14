@@ -234,7 +234,7 @@ Em vez de apresentar apenas conceitos teóricos, o projeto utiliza exemplos, ati
 
 ## 🏠 Página inicial
 
-![Página inicial do A11Y para Todos](assets/images/print-inicio.png)
+![Página inicial do A11Y para Todos](assets/images/print-inicio.jpeg)
 
 Apresentação do tema e acesso rápido aos principais conteúdos do projeto.
 
@@ -242,7 +242,7 @@ Apresentação do tema e acesso rápido aos principais conteúdos do projeto.
 
 ## ♿ Recursos de acessibilidade
 
-![Painel de acessibilidade](assets/images/print-acessibilidade.png)
+![Painel de acessibilidade](assets/images/print-acessibilidade.jpeg)
 
 O usuário pode personalizar a experiência, alterando tamanho dos textos, espaçamento, foco, movimento e outros recursos.
 
@@ -250,7 +250,7 @@ O usuário pode personalizar a experiência, alterando tamanho dos textos, espa�
 
 ## 🛠️ Conserte o Site
 
-![Jogo Conserte o Site](assets/images/print-jogo.png)
+![Jogo Conserte o Site](assets/images/print-jogo.jpeg)
 
 Experiência educativa na qual o usuário precisa encontrar problemas de acessibilidade em páginas simuladas.
 
@@ -258,7 +258,7 @@ Experiência educativa na qual o usuário precisa encontrar problemas de acessib
 
 ## 🧠 Mapa mental
 
-![Mapa mental sobre acessibilidade digital](assets/images/print-mapa.png)
+![Mapa mental sobre acessibilidade digital](assets/images/print-mapa.jpeg)
 
 Permite explorar diferentes conceitos relacionados à acessibilidade de maneira interativa.
 
@@ -266,7 +266,7 @@ Permite explorar diferentes conceitos relacionados à acessibilidade de maneira 
 
 ## ❓ Quiz
 
-![Quiz sobre acessibilidade digital](assets/images/print-quiz.png)
+![Quiz sobre acessibilidade digital](assets/images/print-quiz.jpeg)
 
 Perguntas sobre os conceitos apresentados durante o projeto, com explicações para cada resposta.
 
